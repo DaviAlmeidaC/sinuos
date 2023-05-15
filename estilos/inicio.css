@@ -75,7 +75,7 @@ section {
     font-size: max(2.4rem, 1.4vw);
     text-align: center;
     color: var(--cor03);
-    animation: go-back 6s;
+    animation: go-back 8s;
 }
 
 .titulo{
