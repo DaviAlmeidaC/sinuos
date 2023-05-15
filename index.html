@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>SINUOS</title>
+	<link rel="stylesheet"
+		href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+	<link rel="stylesheet" href="estilos/style.css">
+	<link rel="stylesheet" href="estilos/inicio.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
+	<link rel="stylesheet" href="estilos/carrossel.css">
+	<link rel="icon" href="lg.alt7 (1).jpeg"image/x-icon">
+</head>
+
+<body>
+	<header id="cabecalho">
+		<button id="menu-button">
+			<span class="material-symbols-outlined">
+				menu
+			</span>
+		</button>
+
+		<button>
+			<span class="material-symbols-outlined">
+				account_circle
+			</span>
+		</button>
+	</header>
+	<nav id="menu">
+		<div id="menu-lista">
+			<a href="index.html" class="item selecionado">Início</a>
+			<a href="#" class="item">Link</a>
+			<a href="#" class="item">Link</a>
+			<a href="#" class="item">Link</a>
+			<a href="#" class="item">Link</a>
+			<a href="#" class="item">Link</a>
+			<a href="participantes.html" class="item">Participantes</a>
+		</div>
+		<div>
+
+		</div>
+	</nav>
+	<main>
+		<div class="topo">
+			<img src="imgs/logo1.jpeg" alt="">
+		</div>
+		<div class="botoes-topo">
+			<button id="mostrar-mapa">
+				<a href="#mapa">
+					<span class="material-symbols-outlined">
+						arrow_downward
+					</span>
+				</a>
+			</button>
+		</div>
+
+		<section id="articles-lista">
+
+			<article class="article">
+				<div class="article-imagem">
+					<img src="consequencia-poluicao-agua.webp" alt="">
+				</div>
+				<div class="article-info">
+					<a href="#" class="titulo">Problemas relacionados à água</a>
+					<div class="texto">
+						<p>
+							A geomoforlogia fluvial do estado do Amazonas é marcada por afluentes, rios, córregos e igarapés perenes e sinuosos, que, apesar do seu grau de importância tanto para a flora e fauna da região, são constantemente alvo de despejo de inúmeras formas de poluição química e sólida.
+						</p>
+			
+					</div>
+				</div>
+			</article>
+
+			<article class="article">
+				<div class="article-imagem">
+					<img  src="I N U O S (1).png" alt="">
+				</div>
+				<div class="article-info">
+					<a href="#" class="titulo">O que o nosso projeto pretende fazer</a>
+					<div class="texto">
+						<p>
+							Baseado nisso, o projeto SINUOS surgiu com a proposta de colaborar com os  órgãos governamentais, CONAMA e o projeto Prosamim, responsáveis pelo monitoramento e regulação do IQA (Índice de Qualidade da Água) dos corpos hídricos da Rede Metropolitana de Manaus.
+						</p>
+						<p>
+							através de um sistema autônomo capaz de mapear os igarapés em processos de revitalização, disponibilizando dados de pH, temperatura, TDS e localização por meio de um banco de dados seguro e confiável.
+						</p>
+	
+					</div>
+				</div>
+			</article>
+
+			<article class="article">
+				<div class="article-imagem">
+					<img src="" alt="">
+				</div>
+				<div class="article-info">
+					<a href="#" class="titulo">Informações sobre a equipe</a>
+					<div class="texto">
+						<p>
+							Equipe: MECATRONICA: Manuela, Rafaella, Márcia.
+						</p>
+						<p>
+							Equipe: INFORMATICA: Marcus Felipe, Davi Almeida, Carlos Daniel.
+						</p>
+					</div>
+				</div>
+			</article>
+
+		</section>
+
+		<section id="mapa">
+			<h2 class="titulo">Disposição dos rios da cidade</h2>
+
+			<div id="mapa-container">
+				<!-- O MAPA É PRA SER COLOCADO DENtRO DESSA DIV -->
+				<iframe src="https://www.google.com/maps/d/embed?mid=1u4hhyYTja7YUsPgXzH65P6WP3RPYayQ&hl=pt-BR&ehbc=2E312F" width="640" height="480"></iframe>
+					<!-- Seu dispositivo não é compatível -->
+				</iframe>
+			</div>
+		</section>
+
+		<section id="graficos">
+			<h2 class="titulo">Graficos</h2>
+
+			<div class="graficos-container carrossel">
+
+                <section class="carrossel">
+				
+				
+					<div class="carrossel__container">
+				<div class="swiper">
+				
+				<div class="swiper-pagination"></div>
+				
+				
+				<div class="swiper-wrapper">
+		
+		
+					<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+					<script type="text/javascript">
+					  google.charts.load("current", {packages:['corechart']});
+					  google.charts.setOnLoadCallback(drawChart);
+					  function drawChart() {
+						var data = google.visualization.arrayToDataTable([
+						  ["POLUIÇÂO", "Density", { role: "style" } ],
+						  ["PH", 8.94, "#b87333"],
+						  ["ACIDEZ", 10.49, "silver"],
+						]);
+				  
+						var view = new google.visualization.DataView(data);
+						view.setColumns([0, 1,
+										 { calc: "stringify",
+										   sourceColumn: 1,
+										   type: "string",
+										   role: "annotation" },
+										 2]);
+				  
+						var options = {
+						  title: "detalhes",
+						  width: 500,
+						  height: 400,
+						  bar: {groupWidth: "95%"},
+						  legend: { position: "none" },
+						};
+						var chart = new google.visualization.ColumnChart(document.getElementById("columnchart_values"));
+						chart.draw(view, options);
+					}
+					</script>
+				  <div id="columnchart_values" style="width: 900px; height: 300px;"></div>
+					
+		
+<div id="columnchart_values" style="width: 900px; height: 300px;"></div>
+		
+		
+		<div id="donutchart" style="width: 900px; height: 500px;"></div>
+				<div class="swiper-slide"><script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+			<script type="text/javascript">
+			  google.charts.load("current", {packages:["corechart"]});
+			  google.charts.setOnLoadCallback(drawChart);
+			  function drawChart() {
+				var data = google.visualization.arrayToDataTable([
+				  ['Task', 'Hours per Day'],
+				  ['POLUIÇÂO',     11],
+				  ['PH',      2],
+				  ['ACIDEZ',  2],
+				]);
+		
+				var options = {
+				  title: 'detalhes',
+				  pieHole: 0.4,
+				};
+		
+				var chart = new google.visualization.PieChart(document.getElementById('donutchart'));
+				chart.draw(data, options);
+			  }
+			</script></div>
+		
+		
+		<div id="chart_div" style="width: 900px; height: 500px;"></div>
+				<div class="swiper-slide"><script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+					<script type="text/javascript">
+					  google.charts.load('current', {'packages':['corechart']});
+					  google.charts.setOnLoadCallback(drawVisualization);
+				
+					  function drawVisualization() {
+						// Some raw data (not necessarily accurate)
+						var data = google.visualization.arrayToDataTable([
+						  ['Month', 'Bolivia', 'Ecuador', 'Madagascar', 'Papua New Guinea', 'Rwanda', 'Average'],
+						  ['2004/05',  165,      938,         522,             998,           450,      614.6],
+						  ['2005/06',  135,      1120,        599,             1268,          288,      682],
+						  ['2006/07',  157,      1167,        587,             807,           397,      623],
+						  ['2007/08',  139,      1110,        615,             968,           215,      609.4],
+						  ['2008/09',  136,      691,         629,             1026,          366,      569.6]
+						]);
+				
+						var options = {
+						  title : 'Monthly Coffee Production by Country',
+						  vAxis: {title: 'Cups'},
+						  hAxis: {title: 'Month'},
+						  seriesType: 'bars',
+						  series: {5: {type: 'line'}}
+						};
+				
+						var chart = new google.visualization.ComboChart(document.getElementById('chart_div'));
+						chart.draw(data, options);
+					  }
+					</script></div>
+			
+				
+				
+				</div>
+				
+				
+				
+				<div class="swiper-button-prev"></div>
+				<div class="swiper-button-next"></div>
+				
+				
+				</div>
+
+            </div>
+		</section>
+
+		<div class="botoes-fim">
+			<button id="ir-para-topo">
+				<a href="#">
+					<span class="material-symbols-outlined">
+						arrow_upward
+					</span>
+				</a>
+			</button>
+		</div>
+		<footer id="rodape">
+			<div>
+				<h4 class="titulo">Sample text</h4>
+				<ul>
+					<li>
+						[link ou qualquer outra coisa]
+					</li>
+					<li>
+						[link ou qualquer outra coisa]
+					</li>
+					<li>
+						[link ou qualquer outra coisa]
+					</li>
+					<li>
+						[link ou qualquer outra coisa]
+					</li>
+				</ul>
+			</div>
+			<div>
+				<h4 class="titulo">Sample text</h4>
+				<ul>
+					<li>
+						[link ou qualquer outra coisa]
+					</li>
+					<li>
+						[link ou qualquer outra coisa]
+					</li>
+					<li>
+						[link ou qualquer outra coisa]
+					</li>
+					<li>
+						[link ou qualquer outra coisa]
+					</li>
+				</ul>
+				<h2 class="ALPHA">Version: ALPHA</h2>
+			</div>
+
+			<div id="copyright">
+				<p>&copy;Copyright - SINUOS</p>
+			</div>
+		</footer>
+	</main>
+
+	<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script><!--importação do js-->
+	<script>const swiper = new Swiper('.swiper', {
+		
+		spaceBetween: -600,
+		slidesPerView: 1,
+		pagination: {
+		el: '.swiper-pagination',
+		type: 'bullets',
+		},
+	  });</script>
+
+	<script src="scripts/geral.js"></script>
+	<script src="scripts/carrossel.js"></script>
+</body>
+
+</html>
