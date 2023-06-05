@@ -152,9 +152,54 @@ p{
    border: none;
    color: #fff;
    border-radius: 5px;
+   text-decoration: none;
 }
 
 .icone{
     margin-left: 15vw;
     margin-top: 5vh;
 }
+
+@media screen and (max-width:768px) {
+   .login{
+    margin-top: 10vh;
+    width: 70vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 10vh 0px 0px 15vw;
+    height: 60vh;
+   }
+
+   .img_login{
+    margin-top: -33px;
+    padding: 2vh 19vw;
+   }
+
+   .check{
+    margin-left: -14vw;
+    margin-top: 4vh;
+    margin-bottom: 3vh;
+   }
+    
+   .botao{
+    padding: 0.5vh 2vw;
+    background-color: var(--cor05);
+    border: none;
+    color: #fff;
+    border-radius: 5px;
+ }
+
+ .div-buton{
+    margin-top: 5vh;
+    margin-left: 9vw;
+ }
+ 
+ .icone{
+     display: none;
+ }
+}
+
+
+
