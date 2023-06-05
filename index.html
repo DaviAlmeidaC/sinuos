@@ -10,9 +10,6 @@
 		href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 	<link rel="stylesheet" href="estilos/style.css">
 	<link rel="stylesheet" href="estilos/inicio.css">
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
-	<link rel="stylesheet" href="estilos/carrossel.css">
-	<link rel="icon" href="lg.alt7 (1).jpeg"image/x-icon">
 </head>
 
 <body>
@@ -31,16 +28,26 @@
 	</header>
 	<nav id="menu">
 		<div id="menu-lista">
-			<a href="index.html" class="item selecionado">Início</a>
-			<a href="#" class="item">Link</a>
-			<a href="#" class="item">Link</a>
-			<a href="#" class="item">Link</a>
-			<a href="#" class="item">Link</a>
-			<a href="#" class="item">Link</a>
-			<a href="participantes.html" class="item">Participantes</a>
+			<a href="index.html" class="item selecionado">
+				<span class="material-symbols-outlined">
+					home
+				</span>
+				Início
+			</a>
+			<a href="desenvolvedores.html" class="item">
+				<span class="material-symbols-outlined">
+					groups
+				</span>
+				Desenvolvedores
+			</a>
 		</div>
-		<div>
-
+		<div id="reportar-erro">
+			<button id="btn-reportar-erro" class="item">
+				<span class="material-symbols-outlined">
+					bug_report
+				</span>
+				Reportar erro
+			</button>
 		</div>
 	</nav>
 	<main>
@@ -51,7 +58,14 @@
 			<button id="mostrar-mapa">
 				<a href="#mapa">
 					<span class="material-symbols-outlined">
-						arrow_downward
+						map
+					</span>
+				</a>
+			</button>
+			<button id="mostrar-grafico">
+				<a href="#graficos">
+					<span class="material-symbols-outlined">
+						show_chart
 					</span>
 				</a>
 			</button>
@@ -61,33 +75,17 @@
 
 			<article class="article">
 				<div class="article-imagem">
-					<img src="consequencia-poluicao-agua.webp" alt="">
+					<img src="" alt="">
 				</div>
 				<div class="article-info">
-					<a href="#" class="titulo">Problemas relacionados à água</a>
+					<a href="#" class="titulo">A problemática da água</a>
 					<div class="texto">
 						<p>
-							A geomoforlogia fluvial do estado do Amazonas é marcada por afluentes, rios, córregos e igarapés perenes e sinuosos, que, apesar do seu grau de importância tanto para a flora e fauna da região, são constantemente alvo de despejo de inúmeras formas de poluição química e sólida.
+							A geomoforlogia fluvial do estado do Amazonas é marcada por afluentes, rios, córregos e igarapés perenes e
+							sinuosos,
+							que, apesar do seu grau de importância tanto para a flora e fauna da região,
+							são constantemente alvo de despejo de inúmeras formas de poluição química e sólida.
 						</p>
-			
-					</div>
-				</div>
-			</article>
-
-			<article class="article">
-				<div class="article-imagem">
-					<img  src="I N U O S (1).png" alt="">
-				</div>
-				<div class="article-info">
-					<a href="#" class="titulo">O que o nosso projeto pretende fazer</a>
-					<div class="texto">
-						<p>
-							Baseado nisso, o projeto SINUOS surgiu com a proposta de colaborar com os  órgãos governamentais, CONAMA e o projeto Prosamim, responsáveis pelo monitoramento e regulação do IQA (Índice de Qualidade da Água) dos corpos hídricos da Rede Metropolitana de Manaus.
-						</p>
-						<p>
-							através de um sistema autônomo capaz de mapear os igarapés em processos de revitalização, disponibilizando dados de pH, temperatura, TDS e localização por meio de um banco de dados seguro e confiável.
-						</p>
-	
 					</div>
 				</div>
 			</article>
@@ -97,14 +95,44 @@
 					<img src="" alt="">
 				</div>
 				<div class="article-info">
-					<a href="#" class="titulo">Informações sobre a equipe</a>
+					<a href="#" class="titulo">O que o este projeto pretende fazer</a>
 					<div class="texto">
 						<p>
-							Equipe: MECATRONICA: Manuela, Rafaella, Márcia.
+							Baseado nisso, o projeto SINUOS surgiu com a proposta de colaborar com os órgãos governamentais,
+							CONAMA e o projeto Prosamim, responsáveis pelo monitoramento e regulação do IQA (Índice de Qualidade da
+							Água)
+							dos corpos hídricos da Rede Metropolitana de Manaus.
 						</p>
 						<p>
-							Equipe: INFORMATICA: Marcus Felipe, Davi Almeida, Carlos Daniel.
+							Através de um sistema autônomo capaz de mapear os igarapés em processos de revitalização,
+							disponibilizando dados de pH, temperatura, TDS e localização por meio de um banco de dados seguro e
+							confiável.
 						</p>
+					</div>
+				</div>
+			</article>
+
+			<article class="article">
+				<div class="article-imagem">
+					<img src="" alt="">
+				</div>
+				<div class="article-info">
+					<a href="desenvolvedores.html" class="titulo">Quem forma nossa equipe</a>
+					<div class="texto">
+						<ul>
+							<li>Mecatrônca:</li>
+							<ul>
+								<li>Manuela</li>
+								<li>Márcia</li>
+								<li>Rafaella</li>
+							</ul>
+							<li>Informática:</li>
+							<ul>
+								<li>Carlos Daniel</li>
+								<li>Davi Almeida</li>
+								<li>Marcus Felipe</li>
+							</ul>
+						</ul>
 					</div>
 				</div>
 			</article>
@@ -116,8 +144,9 @@
 
 			<div id="mapa-container">
 				<!-- O MAPA É PRA SER COLOCADO DENtRO DESSA DIV -->
-				<iframe src="https://www.google.com/maps/d/embed?mid=1u4hhyYTja7YUsPgXzH65P6WP3RPYayQ&hl=pt-BR&ehbc=2E312F" width="640" height="480"></iframe>
-					<!-- Seu dispositivo não é compatível -->
+				<iframe src="https://www.google.com/maps/d/embed?mid=1u4hhyYTja7YUsPgXzH65P6WP3RPYayQ&hl=pt-BR&ehbc=2E312F"
+					width="640" height="480"></iframe>
+				<!-- Seu dispositivo não é compatível -->
 				</iframe>
 			</div>
 		</section>
@@ -125,96 +154,19 @@
 		<section id="graficos">
 			<h2 class="titulo">Graficos</h2>
 
-			<div class="graficos-container carrossel">
+			<div id="graficos-container">
+				<iframe src="graficos/ph.html" frameborder="0"></iframe>
+			</div>
 
-                <section class="carrossel">
-				
-				
-					<div class="carrossel__container">
-				<div class="swiper">
-				
-				<div class="swiper-pagination"></div>
-				
-				
-				<div class="swiper-wrapper">
-		
-		
-					<div class="swiper-slide"><script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-					<script type="text/javascript">
-					  google.charts.load("current", {packages:['corechart']});
-					  google.charts.setOnLoadCallback(drawChart);
-					  function drawChart() {
-						var data = google.visualization.arrayToDataTable([
-						  ["POLUIÇÂO", "Density", { role: "style" } ],
-						  ["PH", 8.94, "#b87333"],
-						  ["ACIDEZ", 10.49, "silver"],
-						]);
-				  
-						var view = new google.visualization.DataView(data);
-						view.setColumns([0, 1,
-										 { calc: "stringify",
-										   sourceColumn: 1,
-										   type: "string",
-										   role: "annotation" },
-										 2]);
-				  
-						var options = {
-						  title: "detalhes",
-						  width: 500,
-						  height: 400,
-						  bar: {groupWidth: "95%"},
-						  legend: { position: "none" },
-						};
-						var chart = new google.visualization.ColumnChart(document.getElementById("columnchart_values"));
-						chart.draw(view, options);
-					}
-					</script>
-					</div>
-				  <div id="columnchart_values" style="width: 900px; height: 300px;"></div>
-				
-		
+			<div class="navegacao">
+				<button id="btn-left" class="material-symbols-outlined">
+					arrow_left
+				</button>
+				<button id="btn-right" class="material-symbols-outlined">
+					arrow_right
+				</button>
+			</div>
 
-		
-		
-<div class="swiper-slide"><div id="donutchart" style="width: 900px; height: 500px;"></div>
-				<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-			<script type="text/javascript">
-			  google.charts.load("current", {packages:["corechart"]});
-			  google.charts.setOnLoadCallback(drawChart);
-			  function drawChart() {
-				var data = google.visualization.arrayToDataTable([
-				  ['Task', 'Hours per Day'],
-				  ['POLUIÇÂO',     11],
-				  ['PH',      2],
-				  ['ACIDEZ',  2],
-				]);
-		
-				var options = {
-				  title: 'detalhes',
-				  pieHole: 0.4,
-				};
-		
-				var chart = new google.visualization.PieChart(document.getElementById('donutchart'));
-				chart.draw(data, options);
-			  }
-			</script></div>
-		
-		
-		
-			
-				
-				
-			
-				
-				
-				
-				<div class="swiper-button-prev"></div>
-				<div class="swiper-button-next"></div>
-				
-				
-				</div>
-
-            </div>
 		</section>
 
 		<div class="botoes-fim">
@@ -260,7 +212,6 @@
 						[link ou qualquer outra coisa]
 					</li>
 				</ul>
-				<h2 class="ALPHA">Version: ALPHA</h2>
 			</div>
 
 			<div id="copyright">
@@ -269,19 +220,9 @@
 		</footer>
 	</main>
 
-	<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script><!--importação do js-->
-	<script>const swiper = new Swiper('.swiper', {
-		
-		spaceBetween: -600,
-		slidesPerView: 1,
-		pagination: {
-		el: '.swiper-pagination',
-		type: 'bullets',
-		},
-	  });</script>
-
 	<script src="scripts/geral.js"></script>
-	<script src="scripts/carrossel.js"></script>
+	<script src="scripts/graficos.js"></script>
+	<script src="scripts/reportar.js"></script>
 </body>
 
 </html>

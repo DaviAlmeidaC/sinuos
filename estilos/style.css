@@ -115,11 +115,55 @@ body {
 }
 
 #menu-lista .item {
+    cursor: pointer;
+    outline: none;
+    border: none;
+    background-color: transparent;
+    text-align: left;
     font-size: max(1.6rem, 1.5vw);
     color: white;
     text-decoration: none;
-    padding: 2.5vh 3vw;
+    padding: .8em 1em;
+    display: flex;
+    align-items: flex-end;
+    gap: .5em;
     transition: all 200ms;
+}
+
+.item .material-symbols-outlined {
+    font-variation-settings: 'FILL' 0;
+}
+
+.item.selecionado .material-symbols-outlined {
+    font-variation-settings: 'FILL' 1;
+}
+
+/* Btn reportar bugs*/
+#reportar-erro {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1em;
+}
+#btn-reportar-erro {
+    cursor: pointer;
+    border-radius: 1em;
+    outline: none;
+    border: 2px solid var(--cor01);
+    background-color: var(--cor04);
+    font-size: max(1.6rem, 1.2vw);
+    color: var(--cor01);
+    font-weight: bold;
+    width: 90%;
+    height: 3em;
+    text-align: left;
+    padding: 0 1em;
+    display: flex;
+    align-items: center;
+    gap: .5em;
+    transition: all 200ms;
+}
+#btn-reportar-erro:hover {
+    transform: scale(1.1);
 }
 
 #menu-lista .item:hover {
@@ -173,6 +217,7 @@ main .topo {
     display: flex;
     align-items: center;
     justify-content: flex-end;
+    gap: 1em;
 }
 
 .botoes-topo button, .botoes-fim button {
@@ -194,8 +239,8 @@ main .topo {
     transition: all 200ms;
 }
 
-.botoes-topo button:hover .material-symbols-outlined, 
-.botoes-fim button:hover .material-symbols-outlined {
+.botoes-topo button:active .material-symbols-outlined, 
+.botoes-fim button:active .material-symbols-outlined {
     color: black;
 }
 
